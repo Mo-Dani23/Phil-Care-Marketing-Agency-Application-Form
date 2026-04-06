@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UPS Phil Care Agency</title>
+  <link rel="icon" type="image/png" href="Philip-Logo.png" />
+  <style>
+    * { box-sizing: border-box; }
+
+    @keyframes fadeInPage {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes popInModal {
+      0% { opacity: 0; transform: translateY(24px) scale(0.97); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #1f2937;
+      animation: fadeInPage 0.45s ease;
+      padding: 24px;
+    }
+
+    .modal {
+      max-width: 780px;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+      border-radius: 4px;
+      overflow: hidden;
+      animation: popInModal 0.55s ease;
+      transform-origin: top center;
+    }
+
+    .header {
+      background: #0c7a87;
+      color: #fff;
+      padding: 18px 22px 28px;
+      position: relative;
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-logo {
+      height: 40px;
+      background: #fff;
+      padding: 4px;
+      border-radius: 4px;
+    }
+
+    .brand {
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.95;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      margin: 14px 0 0;
+      font-weight: 700;
+    }
+
+    .content {
+      padding: 28px 20px 22px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .section-title .icon {
+      font-size: 22px;
+    }
+
+    .section-title .text {
+      font-size: 18px;
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    .desc {
+      margin: 0 0 24px 0;
+      max-width: 680px;
+      color: #374151;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    form {
+      margin-top: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px 28px;
+      margin-bottom: 28px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .required { color: #dc2626; }
+
+    .field input,
+    .field select {
+      width: 100%;
+      border: none;
+      border-bottom: 1.8px solid #4b5563;
+      padding: 14px 14px 12px;
+      background: #fafafa;
+      font-size: 16px;
+      outline: none;
+      transition: 0.2s ease;
+    }
+
+    .field input:focus,
+    .field select:focus {
+      border-bottom-color: #0c7a87;
+      background: #fff;
+      box-shadow: 0 6px 18px rgba(12, 122, 135, 0.08);
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+    .consent {
+      margin-top: 4px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      line-height: 1.8;
+      color: #374151;
+      font-size: 14px;
+    }
+
+    .consent input {
+      margin-top: 4px;
+      width: 18px;
+      height: 18px;
+      accent-color: #0c7a87;
+      flex-shrink: 0;
+    }
+
+    .notice {
+      margin-top: 16px;
+      color: #374151;
+      line-height: 1.9;
+      font-size: 14px;
+    }
+
+    .button-wrap {
+      display: flex;
+      justify-content: center;
+      padding: 36px 0 18px;
+    }
+
+    button {
+      min-width: 190px;
+      border: none;
+      background: #ececec;
+      color: #7b7b7b;
+      padding: 18px 22px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s ease;
+      border-bottom: 3px solid #c8c8c8;
+    }
+
+    button:hover {
+      background: #0c7a87;
+      color: #fff;
+      border-bottom-color: #075c66;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 10px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .title {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="modal">
+    <div class="header">
+      <div class="brand-row">
+        <img src="Phil-Care Logo.png" alt="PhilCare Logo" class="brand-logo" />
+        <div class="brand">UPS Phil Care Agency</div>
+      </div>
+      <h1 class="title">Apply Now</h1>
+    </div>
+
+    <div class="content">
+      <div class="section-title">
+        <span class="icon">🧾</span>
+        <span class="text">Personal Information</span>
+      </div>
+
+      <p class="desc">
+        Thank you for your interest in joining UPS Phil Care Agency. To apply, kindly provide your details below. Our team will review your application and reach out to you for the next steps.
+      </p>
+
+      <form action="https://api.sheetmonkey.io/form/nNAMYAjuysUvN5Q9tGH6XS" method="POST">
+        <input type="hidden" name="redirectTo" value="thankyou.html" />
+        <input type="hidden" name="accessKey" value="YOUR_ACCESS_KEY_HERE" />
+        <input type="hidden" name="subject" value="New UPS Phil Care Agency Applicant" />
+        <input type="hidden" name="redirectTo" value="thankyou.html" />
+
+        <div class="grid">
+          <div class="field">
+            <label for="firstName">First Name<span class="required">*</span></label>
+            <input type="text" id="firstName" name="First Name" placeholder="First Name" required />
+          </div>
+
+          <div class="field">
+            <label for="lastName">Last Name<span class="required">*</span></label>
+            <input type="text" id="lastName" name="Last Name" placeholder="Last Name" required />
+          </div>
+
+          <div class="field">
+            <label for="mobile">Mobile Number<span class="required">*</span></label>
+            <input type="tel" id="mobile" name="Mobile Number" placeholder="+63 9000000000" required />
+          </div>
+
+          <div class="field">
+            <label for="email">Email Address<span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="youremail@domain.com" required />
+          </div>
+
+          <div class="field full-width">
+            <label for="position">Choose a Position<span class="required">*</span></label>
+            <select id="position" name="Preferred Position" required>
+              <option value="" selected disabled>Select a position</option>
+              <option value="Group Manager">Group Manager</option>
+              <option value="Sales Associate">Sales Associate</option>
+            </select>
+          </div>
+        </div>
+
+        <label class="consent">
+          <input type="checkbox" name="Consent" required />
+          <span>I agree to be contacted by UPS Phil Care Agency through call, text, or email regarding my application.</span>
+        </label>
+
+        <p class="notice">
+          By clicking the Submit button below, you confirm that the information you provided is true and correct, and you allow UPS Phil Care Agency to receive and review your application details.
+        </p>
+
+        <div class="button-wrap">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+<script>
+// Show thank you message after submit
+if (window.location.search.includes('success=true')) {
+  document.body.innerHTML = `
+    <div style="font-family: Arial; background: linear-gradient(135deg,#0f2027,#203a43,#2c5364); height:100vh; display:flex; justify-content:center; align-items:center;">
+      <div style="background:white; padding:40px; max-width:600px; text-align:center; box-shadow:0 10px 30px rgba(0,0,0,0.2); border-radius:6px;">
+        <h1 style="color:#0c7a87;">Thank You!</h1>
+        <p>Thank you for answering the application form of UPS Phil Care Agency.</p>
+        <p>Our team will review your application and we will contact you through Gmail, Viber, or call using the contact number you provided.</p>
+        <p>Please keep your lines open and check your email for updates.</p>
+        <p>We look forward to working with you!</p>
+      </div>
+    </div>
+  `;
+}
+</script>
+</body>
+</html>
+
+
